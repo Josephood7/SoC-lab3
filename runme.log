@@ -1,0 +1,561 @@
+
+*** Running vivado
+    with args -log fir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source fir.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/project_1/project_1.srcs/utils_1/imports/synth_1/fir.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/project_1/project_1.srcs/utils_1/imports/synth_1/fir.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top fir -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1623.160 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+INFO: [Synth 8-6157] synthesizing module 'bram11_d' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'bram11_d' (0#1) [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:4]
+WARNING: [Synth 8-6104] Input port 'tap_Do' has an internal driver [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:91]
+WARNING: [Synth 8-6104] Input port 'data_Do' has an internal driver [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:101]
+INFO: [Synth 8-226] default block is never used [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:178]
+INFO: [Synth 8-226] default block is never used [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:200]
+INFO: [Synth 8-226] default block is never used [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:210]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:240]
+INFO: [Synth 8-6157] synthesizing module 'kernel' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/kernel.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'kernel' (0#1) [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/kernel.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+WARNING: [Synth 8-7137] Register data_Di_reg in module fir has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:99]
+WARNING: [Synth 8-7137] Register last_reg in module fir has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:349]
+WARNING: [Synth 8-3917] design fir has port tap_A[11] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[10] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[9] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[8] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[7] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[6] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[11] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[10] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[9] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[8] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[7] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[6] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1641.660 ; gain = 18.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1641.660 ; gain = 18.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1641.660 ; gain = 18.500
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1641.660 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/constraints.xdc]
+Finished Parsing XDC File [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1718.023 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1718.023 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'awready_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:181]
+WARNING: [Synth 8-327] inferring latch for variable 'wready_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:182]
+WARNING: [Synth 8-327] inferring latch for variable 'rdata_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:211]
+WARNING: [Synth 8-327] inferring latch for variable 'ap_start_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:243]
+WARNING: [Synth 8-327] inferring latch for variable 'ap_done_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:248]
+WARNING: [Synth 8-327] inferring latch for variable 'tap_Di_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ap_idle_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:253]
+WARNING: [Synth 8-327] inferring latch for variable 'data_length_reg' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:259]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---RAMs : 
+	              352 Bit	(11 X 32 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 12    
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 2     
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 10    
+	   3 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 25    
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'tap_RAM/r_A_reg' and it is trimmed from '12' to '6' bits. [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'data_RAM/r_A_reg' and it is trimmed from '12' to '6' bits. [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:32]
+DSP Report: Generating DSP fir_kernel/Yn0, operation Mode is: A*B.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+DSP Report: Generating DSP fir_kernel/Yn0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+DSP Report: Generating DSP fir_kernel/Yn0, operation Mode is: A*B.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+DSP Report: Generating DSP fir_kernel/Yn0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+DSP Report: operator fir_kernel/Yn0 is absorbed into DSP fir_kernel/Yn0.
+WARNING: [Synth 8-3917] design fir has port tap_A[11] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[10] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[9] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[8] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[7] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[6] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[1] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port tap_A[0] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[11] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[10] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[9] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[8] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[7] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[6] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[1] driven by constant 0
+WARNING: [Synth 8-3917] design fir has port data_A[0] driven by constant 0
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[31] with 1st driver pin 'data_RAM/Do_inferred/Do[31]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[31] with 2nd driver pin 'data_Do[31]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[30] with 1st driver pin 'data_RAM/Do_inferred/Do[30]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[30] with 2nd driver pin 'data_Do[30]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[29] with 1st driver pin 'data_RAM/Do_inferred/Do[29]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[29] with 2nd driver pin 'data_Do[29]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[28] with 1st driver pin 'data_RAM/Do_inferred/Do[28]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[28] with 2nd driver pin 'data_Do[28]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[27] with 1st driver pin 'data_RAM/Do_inferred/Do[27]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[27] with 2nd driver pin 'data_Do[27]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[26] with 1st driver pin 'data_RAM/Do_inferred/Do[26]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[26] with 2nd driver pin 'data_Do[26]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[25] with 1st driver pin 'data_RAM/Do_inferred/Do[25]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[25] with 2nd driver pin 'data_Do[25]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[24] with 1st driver pin 'data_RAM/Do_inferred/Do[24]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[24] with 2nd driver pin 'data_Do[24]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[23] with 1st driver pin 'data_RAM/Do_inferred/Do[23]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[23] with 2nd driver pin 'data_Do[23]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[22] with 1st driver pin 'data_RAM/Do_inferred/Do[22]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[22] with 2nd driver pin 'data_Do[22]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[21] with 1st driver pin 'data_RAM/Do_inferred/Do[21]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[21] with 2nd driver pin 'data_Do[21]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[20] with 1st driver pin 'data_RAM/Do_inferred/Do[20]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[20] with 2nd driver pin 'data_Do[20]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[19] with 1st driver pin 'data_RAM/Do_inferred/Do[19]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[19] with 2nd driver pin 'data_Do[19]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[18] with 1st driver pin 'data_RAM/Do_inferred/Do[18]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[18] with 2nd driver pin 'data_Do[18]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[17] with 1st driver pin 'data_RAM/Do_inferred/Do[17]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[17] with 2nd driver pin 'data_Do[17]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[16] with 1st driver pin 'data_RAM/Do_inferred/Do[16]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[16] with 2nd driver pin 'data_Do[16]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[15] with 1st driver pin 'data_RAM/Do_inferred/Do[15]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[15] with 2nd driver pin 'data_Do[15]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[14] with 1st driver pin 'data_RAM/Do_inferred/Do[14]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[14] with 2nd driver pin 'data_Do[14]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[13] with 1st driver pin 'data_RAM/Do_inferred/Do[13]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[13] with 2nd driver pin 'data_Do[13]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[12] with 1st driver pin 'data_RAM/Do_inferred/Do[12]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[12] with 2nd driver pin 'data_Do[12]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[11] with 1st driver pin 'data_RAM/Do_inferred/Do[11]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[11] with 2nd driver pin 'data_Do[11]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[10] with 1st driver pin 'data_RAM/Do_inferred/Do[10]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[10] with 2nd driver pin 'data_Do[10]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[9] with 1st driver pin 'data_RAM/Do_inferred/Do[9]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[9] with 2nd driver pin 'data_Do[9]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[8] with 1st driver pin 'data_RAM/Do_inferred/Do[8]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[8] with 2nd driver pin 'data_Do[8]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[7] with 1st driver pin 'data_RAM/Do_inferred/Do[7]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[7] with 2nd driver pin 'data_Do[7]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[6] with 1st driver pin 'data_RAM/Do_inferred/Do[6]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[6] with 2nd driver pin 'data_Do[6]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[5] with 1st driver pin 'data_RAM/Do_inferred/Do[5]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[5] with 2nd driver pin 'data_Do[5]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[4] with 1st driver pin 'data_RAM/Do_inferred/Do[4]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[4] with 2nd driver pin 'data_Do[4]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[3] with 1st driver pin 'data_RAM/Do_inferred/Do[3]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[3] with 2nd driver pin 'data_Do[3]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[2] with 1st driver pin 'data_RAM/Do_inferred/Do[2]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[2] with 2nd driver pin 'data_Do[2]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[1] with 1st driver pin 'data_RAM/Do_inferred/Do[1]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[1] with 2nd driver pin 'data_Do[1]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[0] with 1st driver pin 'data_RAM/Do_inferred/Do[0]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:49]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_Do[0] with 2nd driver pin 'data_Do[0]' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:3]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[31]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[30]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[29]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[28]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[27]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[26]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[25]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[24]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[23]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[22]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[21]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[20]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[19]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[18]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[17]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[16]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[15]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sm_tdata_reg[14]/Q' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:344]
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[31]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[30]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[29]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[28]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[27]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[26]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[25]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[24]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[23]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[22]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[21]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[20]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[19]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[18]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[17]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[16]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[15]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[14]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[13]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[12]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[11]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[10]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[9]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[8]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[7]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[6]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[5]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[4]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[3]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[2]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[1]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_length_reg[0]) is unused and will be removed from module fir.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v:233]
+WARNING: [Synth 8-3332] Sequential element (data_RAM/r_A_reg_rep_bsel[5]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_RAM/r_A_reg_rep_bsel[4]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_RAM/r_A_reg_rep_bsel[3]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (data_RAM/r_A_reg_rep_bsel[2]) is unused and will be removed from module fir.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-----------------+-----------+----------------------+----------------+
+|Module Name | RTL Object      | Inference | Size (Depth x Width) | Primitives     | 
++------------+-----------------+-----------+----------------------+----------------+
+|fir         | tap_RAM/RAM_reg | Implied   | 16 x 32              | RAM16X1D x 32  | 
++------------+-----------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-----------------+-----------+----------------------+----------------+
+|Module Name | RTL Object      | Inference | Size (Depth x Width) | Primitives     | 
++------------+-----------------+-----------+----------------------+----------------+
+|fir         | tap_RAM/RAM_reg | Implied   | 16 x 32              | RAM16X1D x 32  | 
++------------+-----------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       39|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |LUT1     |     5|
+|3     |LUT2     |     9|
+|4     |LUT3     |    38|
+|5     |LUT4     |    16|
+|6     |LUT5     |     9|
+|7     |LUT6     |    57|
+|8     |RAM16X1D |    32|
+|9     |FDCE     |    20|
+|10    |FDPE     |     6|
+|11    |FDRE     |    45|
+|12    |LD       |    69|
+|13    |IBUF     |   129|
+|14    |OBUF     |   169|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 335 critical warnings and 63 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1718.023 ; gain = 18.500
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1718.023 ; gain = 94.863
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1718.023 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 101 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1718.023 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 101 instances were transformed.
+  LD => LDCE: 67 instances
+  LD => LDCE (inverted pins: G): 2 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 32 instances
+
+Synth Design complete, checksum: f073b5e6
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 79 Warnings, 164 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1718.023 ; gain = 94.863
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/project_1/project_1.runs/synth_1/fir.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_utilization_synth.rpt -pb fir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 19 22:13:31 2023...

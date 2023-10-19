@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram11_d
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module kernel
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/fir_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram11_d
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'bram11_d' [C:/Users/User/Desktop/SoC/SoC_lab/course-lab_3/fir/bram11_d.v:4]
+INFO: [VRFC 10-311] analyzing module fir_tb
